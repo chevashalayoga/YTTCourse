@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embodied Alignment YTT RYS 200 — Cheva Shala Yoga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+Thai:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --terracotta: #A0522D;
+    --terracotta-dark: #7A3B1E;
+    --terracotta-deep: #5C2A12;
+    --sand: #FAE5D3;
+    --sand-mid: #F0C9A8;
+    --cream: #FDF8F3;
+    --warm-white: #FFFAF6;
+    --text-dark: #2A1810;
+    --text-mid: #5C3D2A;
+    --text-muted: #9B7560;
+    --gold: #C8956C;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--warm-white);
+    color: var(--text-dark);
+    font-family: 'Jost', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Thai text */
+  .thai {
+    font-family: 'Noto Serif Thai', serif;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--terracotta-deep);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(200,149,108,0.25) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(160,82,45,0.3) 0%, transparent 50%);
+  }
+
+  .hero-texture {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero-content { position: relative; z-index: 1; max-width: 700px; }
+
+  .hero-badge {
+    display: inline-block;
+    border: 1px solid rgba(250,229,211,0.4);
+    color: var(--sand);
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 100px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+
+  .hero-school {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--sand-mid);
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.3s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 10vw, 88px);
+    font-weight: 300;
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--sand);
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 300;
+    color: var(--sand-mid);
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.5s forwards;
+  }
+
+  .hero-tagline {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(250,229,211,0.7);
+    letter-spacing: 1px;
+    margin-bottom: 56px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.7s forwards;
+  }
+
+  .btn-primary {
+    background: var(--sand);
+    color: var(--terracotta-deep);
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px 36px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  }
+
+  .btn-outline {
+    border: 1px solid rgba(250,229,211,0.5);
+    color: var(--sand);
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 16px 36px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    background: transparent;
+  }
+
+  .btn-outline:hover {
+    background: rgba(250,229,211,0.1);
+    border-color: var(--sand);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(250,229,211,0.4);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: pulse 2s ease infinite;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(250,229,211,0.4), transparent);
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 24px; }
+
+  .container { max-width: 900px; margin: 0 auto; }
+  .container-wide { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin-bottom: 32px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  /* ── PAIN POINT ── */
+  .pain {
+    background: var(--cream);
+    border-top: 1px solid rgba(160,82,45,0.1);
+  }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+
+  .pain-card {
+    background: #fff;
+    border: 1px solid rgba(160,82,45,0.12);
+    border-radius: 8px;
+    padding: 28px 32px;
+    border-left: 3px solid var(--terracotta);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .pain-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(160,82,45,0.08);
+  }
+
+  .pain-card p {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-mid);
+  }
+
+  .pain-answer {
+    background: var(--terracotta);
+    border-radius: 8px;
+    padding: 48px;
+    text-align: center;
+  }
+
+  .pain-answer h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+
+  .pain-answer p {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.8;
+  }
+
+  /* ── TRANSFORMATION ── */
+  .transform { background: var(--warm-white); }
+
+  .transform-items { display: flex; flex-direction: column; gap: 2px; }
+
+  .transform-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .transform-item:nth-child(odd) .transform-left { background: var(--terracotta); }
+  .transform-item:nth-child(even) .transform-left { background: var(--terracotta-dark); }
+  .transform-item:nth-child(odd) .transform-right { background: var(--sand); }
+  .transform-item:nth-child(even) .transform-right { background: #FDE8D4; }
+
+  .transform-left {
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+  }
+
+  .transform-left h4 {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.5;
+  }
+
+  .transform-right {
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+  }
+
+  .transform-right p {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  .transform-closing {
+    margin-top: 48px;
+    background: var(--terracotta-deep);
+    border-radius: 8px;
+    padding: 48px;
+    text-align: center;
+  }
+
+  .transform-closing p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 12px;
+  }
+
+  .transform-closing h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 300;
+    color: #fff;
+    font-style: italic;
+  }
+
+  /* ── PILLARS ── */
+  .pillars { background: var(--cream); }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .pillar-card {
+    background: #fff;
+    border: 1px solid rgba(160,82,45,0.1);
+    border-radius: 8px;
+    padding: 40px 36px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(160,82,45,0.1);
+  }
+
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--sand-mid);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .pillar-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--terracotta);
+    margin-bottom: 12px;
+  }
+
+  .pillar-card p {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.8;
+  }
+
+  /* ── STRUCTURE ── */
+  .structure { background: var(--warm-white); }
+
+  .phases {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .phase-card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .phase-header {
+    background: var(--terracotta);
+    padding: 28px 32px;
+  }
+
+  .phase-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .phase-header .phase-hours {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 1px;
+  }
+
+  .phase-body {
+    background: var(--sand);
+    padding: 28px 32px;
+  }
+
+  .phase-schedule {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    color: var(--terracotta-dark);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(160,82,45,0.2);
+    line-height: 1.8;
+  }
+
+  .phase-topics li {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-mid);
+    margin-bottom: 8px;
+    padding-left: 16px;
+    position: relative;
+    list-style: none;
+    line-height: 1.6;
+  }
+
+  .phase-topics li::before {
+    content: '•';
+    color: var(--terracotta);
+    position: absolute;
+    left: 0;
+  }
+
+  .morning-note {
+    background: var(--terracotta-deep);
+    border-radius: 8px;
+    padding: 28px 36px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .morning-note-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+  }
+
+  .morning-note p {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+  }
+
+  .morning-note strong {
+    color: var(--sand);
+    font-weight: 600;
+  }
+
+  /* ── FOUNDER ── */
+  .founder {
+    background: var(--terracotta-deep);
+    color: #fff;
+  }
+
+  .founder .section-label { color: var(--sand-mid); }
+  .founder .section-title { color: #fff; }
+  .founder .section-title em { color: var(--sand); }
+
+  .founder-intro {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.8;
+    margin-bottom: 56px;
+    max-width: 600px;
+  }
+
+  .privileges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+
+  .privilege-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(250,229,211,0.15);
+    border-radius: 8px;
+    padding: 28px;
+    transition: background 0.2s ease;
+  }
+
+  .privilege-card:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .privilege-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--sand);
+    margin-bottom: 10px;
+  }
+
+  .privilege-card p {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+  }
+
+  /* ── PRICING ── */
+  .pricing { background: var(--cream); }
+
+  .price-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .price-card {
+    background: #fff;
+    border: 1px solid rgba(160,82,45,0.12);
+    border-radius: 8px;
+    padding: 36px 28px;
+    text-align: center;
+  }
+
+  .price-card.featured {
+    background: var(--terracotta);
+    border-color: var(--terracotta);
+    transform: scale(1.04);
+    box-shadow: 0 16px 48px rgba(160,82,45,0.25);
+  }
+
+  .price-card .price-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+
+  .price-card.featured .price-label { color: rgba(255,255,255,0.7); }
+
+  .price-card .price-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--terracotta);
+    margin-bottom: 8px;
+  }
+
+  .price-card.featured .price-value { color: #fff; }
+
+  .price-card .price-sub {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .price-card.featured .price-sub { color: rgba(255,255,255,0.65); }
+
+  .payment-note {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  /* ── SMALL GROUP ── */
+  .small-group {
+    background: var(--terracotta);
+    text-align: center;
+    padding: 80px 24px;
+  }
+
+  .small-group h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 7vw, 72px);
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+
+  .small-group p {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.8;
+    max-width: 540px;
+    margin: 0 auto 48px;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline { background: var(--warm-white); }
+
+  .timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 48px;
+  }
+
+  .timeline-items::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    bottom: 12px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--terracotta), rgba(160,82,45,0.1));
+  }
+
+  .timeline-item {
+    position: relative;
+    padding: 24px 0 24px 32px;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -40px;
+    top: 28px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    border: 2px solid var(--cream);
+    box-shadow: 0 0 0 3px rgba(160,82,45,0.2);
+  }
+
+  .timeline-item .time {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 6px;
+  }
+
+  .timeline-item h4 {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-dark);
+  }
+
+  /* ── WHO ── */
+  .who { background: var(--cream); }
+
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .who-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 28px 32px;
+    border-left: 3px solid var(--terracotta);
+  }
+
+  .who-card p {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  /* ── FAQ ── */
+  .faq { background: var(--warm-white); }
+
+  .faq-items { display: flex; flex-direction: column; gap: 2px; }
+
+  .faq-item {
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid rgba(160,82,45,0.1);
+  }
+
+  .faq-q {
+    padding: 24px 28px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+    transition: background 0.2s;
+  }
+
+  .faq-q:hover { background: var(--sand); }
+
+  .faq-q h4 {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.5;
+  }
+
+  .faq-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  .faq-item.open .faq-a { max-height: 300px; }
+
+  .faq-a-inner {
+    padding: 0 28px 24px;
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.8;
+  }
+
+  /* ── CTA FINAL ── */
+  .cta-final {
+    background: var(--terracotta-deep);
+    padding: 120px 24px;
+    text-align: center;
+  }
+
+  .cta-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 3.5vw, 28px);
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 8px;
+  }
+
+  .cta-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .cta-main em { color: var(--sand); font-style: italic; }
+
+  .cta-sub {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 56px;
+  }
+
+  .cta-contact {
+    margin-top: 48px;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .cta-contact a {
+    color: var(--sand-mid);
+    text-decoration: none;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #1A0F08;
+    padding: 32px 24px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    .pain-grid, .pillars-grid, .phases, .privileges-grid, .who-grid { grid-template-columns: 1fr; }
+    .price-cards { grid-template-columns: 1fr; }
+    .price-card.featured { transform: none; }
+    .transform-item { grid-template-columns: 1fr; }
+    section { padding: 72px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-texture"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Founder Cohort — รับเพียง 12 คน</div>
+    <p class="hero-school">Cheva Shala Yoga</p>
+    <h1 class="hero-title">Embodied<br><em>Alignment</em></h1>
+    <p class="hero-subtitle">Yoga Teacher Training · RYS 200</p>
+    <p class="hero-tagline thai">Embodied  ·  Structured  ·  Conscious Teaching</p>
+    <div class="hero-cta">
+      <a href="https://lin.ee/mOo3tAZ" class="btn-primary">สมัครเลย →</a>
+      <a href="#pain" class="btn-outline">ดูรายละเอียด</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- PAIN POINT -->
+<section class="pain" id="pain">
+  <div class="container">
+    <p class="section-label reveal">สำหรับคุณ</p>
+    <h2 class="section-title reveal">คุณเคยรู้สึก<em>แบบนี้</em>ไหม?</h2>
+    <div class="pain-grid reveal">
+      <div class="pain-card">
+        <p class="thai">ฝึกโยคะมาหลายปี — แต่พอมีคนถามว่า "สอนได้ไหม?" ยังลังเล</p>
+      </div>
+      <div class="pain-card">
+        <p class="thai">ยืนหน้าห้องได้ แต่ข้างในรู้สึกว่าตัวเองยังไม่พร้อม</p>
+      </div>
+      <div class="pain-card">
+        <p class="thai">กลัวว่าถ้าสอนผิด จะทำให้คนบาดเจ็บ แต่ก็ไม่รู้จะเริ่มเรียนรู้จากตรงไหน</p>
+      </div>
+      <div class="pain-card">
+        <p class="thai">อยากสอน — แต่ยังหาตัวเองไม่เจอในฐานะครู</p>
+      </div>
+    </div>
+    <div class="pain-answer reveal">
+      <h3>ถ้าใช่ หลักสูตรนี้ออกแบบมาเพื่อคุณโดยเฉพาะ</h3>
+      <p class="thai">ไม่ใช่เพื่อให้คุณจำ sequence ให้ได้ครบ<br>แต่เพื่อให้คุณยืนหน้าห้องได้ด้วยความมั่นใจจริงๆ</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMATION -->
+<section class="transform" id="transform">
+  <div class="container">
+    <p class="section-label reveal">สิ่งที่คุณจะได้</p>
+    <h2 class="section-title reveal">เมื่อจบหลักสูตรนี้<br><em>คุณจะ...</em></h2>
+    <div class="transform-items reveal">
+      <div class="transform-item">
+        <div class="transform-left"><h4 class="thai">สอนได้โดยไม่ต้องพึ่งสคริปต์</h4></div>
+        <div class="transform-right"><p class="thai">เพราะคุณเข้าใจร่างกายจริงๆ ไม่ใช่แค่จำท่า</p></div>
+      </div>
+      <div class="transform-item">
+        <div class="transform-left"><h4 class="thai">อ่านผู้เรียนออก และปรับได้ทันที</h4></div>
+        <div class="transform-right"><p class="thai">รู้ว่าใครต้องการอะไร โดยไม่ต้องรอให้เขาบอก</p></div>
+      </div>
+      <div class="transform-item">
+        <div class="transform-left"><h4 class="thai">สอนได้อย่างปลอดภัย</h4></div>
+        <div class="transform-right"><p class="thai">มีความรู้เรื่อง anatomy และ alignment ที่ใช้งานได้จริง ไม่ใช่แค่ทฤษฎี</p></div>
+      </div>
+      <div class="transform-item">
+        <div class="transform-left"><h4 class="thai">มีขอบเขตที่ชัดเจน</h4></div>
+        <div class="transform-right"><p class="thai">รู้ว่าอะไรคืองานของครู และเมื่อไหรที่ต้องส่งต่อ</p></div>
+      </div>
+      <div class="transform-item">
+        <div class="transform-left"><h4 class="thai">มีสไตล์การสอนของตัวเอง</h4></div>
+        <div class="transform-right"><p class="thai">ไม่ใช่สำเนาของครูคนอื่น แต่เป็นแบบที่ authentic กับตัวคุณจริงๆ</p></div>
+      </div>
+    </div>
+    <div class="transform-closing reveal">
+      <p>และที่สำคัญที่สุด —</p>
+      <h3>คุณจะรู้สึกว่าตัวเองพร้อม<br>ไม่ใช่แค่ "ผ่าน" หลักสูตร</h3>
+    </div>
+  </div>
+</section>
+
+<!-- 4 PILLARS -->
+<section class="pillars" id="pillars">
+  <div class="container">
+    <p class="section-label reveal">แนวทางของเรา</p>
+    <h2 class="section-title reveal">4 เสาหลักของ<em>หลักสูตร</em></h2>
+    <div class="pillars-grid reveal">
+      <div class="pillar-card">
+        <div class="pillar-num">01</div>
+        <h3>Embodied Practice</h3>
+        <p class="thai">เรียนรู้ผ่านประสบการณ์จริงของร่างกาย พัฒนา body awareness, self-observation และ nervous system awareness</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">02</div>
+        <h3>Intelligent Alignment</h3>
+        <p class="thai">เข้าใจ movement และ alignment อย่างมีเหตุผล เรียนรู้ anatomy, movement principles และ modification</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">03</div>
+        <h3>Conscious Teaching</h3>
+        <p class="thai">พัฒนาการสื่อสารและ hold space อย่างมีสติ รวมถึง cueing, ethics, trauma-aware teaching และ consent</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">04</div>
+        <h3>Sustainable Teaching Path</h3>
+        <p class="thai">พัฒนาเส้นทางอาชีพครูอย่างยั่งยืน ทั้ง class design, teacher identity และการสร้าง career ระยะยาว</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRUCTURE -->
+<section class="structure" id="structure">
+  <div class="container-wide">
+    <p class="section-label reveal">โครงสร้างหลักสูตร</p>
+    <h2 class="section-title reveal">200 ชั่วโมง · <em>2 Phases</em></h2>
+    <div class="phases reveal">
+      <div class="phase-card">
+        <div class="phase-header">
+          <h3>Phase 1 — Foundation</h3>
+          <p class="phase-hours">50 ชั่วโมง · Online Live · 5 Weekends</p>
+        </div>
+        <div class="phase-body">
+          <div class="phase-schedule">
+            เสาร์–อาทิตย์<br>
+            08:00–09:00 Morning Practice<br>
+            09:00–15:00 Training Session<br>
+            <em style="color:var(--terracotta); font-size:12px;">กรกฎาคม – สิงหาคม 2569</em>
+          </div>
+          <ul class="phase-topics">
+            <li class="thai">Foundations of Asana & Alignment</li>
+            <li class="thai">Basic Anatomy for Yoga</li>
+            <li class="thai">Breath & Awareness</li>
+            <li class="thai">Self Observation Practice</li>
+            <li class="thai">Yoga Philosophy & History</li>
+            <li class="thai">Eight Limbs of Yoga</li>
+            <li class="thai">Foundations of Sequencing & Cueing</li>
+            <li class="thai">Introduction to Ethics & Professionalism</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-header" style="background: var(--terracotta-dark);">
+          <h3>Phase 2 — Professional Training</h3>
+          <p class="phase-hours">150 ชั่วโมง · Hybrid · 10 Weekends</p>
+        </div>
+        <div class="phase-body" style="background: #FDE8D4;">
+          <div class="phase-schedule">
+            เสาร์–อาทิตย์<br>
+            08:00–09:00 Morning Practice<br>
+            09:00–17:30 Training Session<br>
+            <em style="color:var(--terracotta); font-size:12px;">สิงหาคม – ตุลาคม 2569</em>
+          </div>
+          <ul class="phase-topics">
+            <li class="thai">Intelligent Alignment & Anatomy Lab</li>
+            <li class="thai">Conscious Teaching & Ethics</li>
+            <li class="thai">Sequencing & Class Design</li>
+            <li class="thai">Layered Teaching Practicum</li>
+            <li class="thai">Trauma-Aware Teaching</li>
+            <li class="thai">Online Teaching Skills</li>
+            <li class="thai">Teacher Identity Development</li>
+            <li class="thai">Sustainable Teaching Career</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="morning-note reveal">
+      <div class="morning-note-icon">🌅</div>
+      <p class="thai"><strong>Morning Practice — ทุกวันที่มีเรียน</strong><br>นักเรียนทุกคนร่วมฝึกกับครูตั้งแต่ 08:00–09:00 ก่อนเข้า Training Session ทุกวัน เสาร์–อาทิตย์ ตลอดทั้งหลักสูตร</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER COHORT -->
+<section class="founder" id="founder">
+  <div class="container">
+    <p class="section-label reveal">รุ่นแรกของโรงเรียน</p>
+    <h2 class="section-title reveal">Founder <em>Cohort</em></h2>
+    <p class="founder-intro thai reveal">รุ่นแรกของหลักสูตรนี้ ไม่ใช่เพียง "ผู้เรียน" แต่คือ Founder Teachers ของโรงเรียน — และจะได้รับสิทธิพิเศษที่รุ่นต่อไปจะไม่ได้รับ</p>
+    <div class="privileges-grid reveal">
+      <div class="privilege-card">
+        <h4>Lifetime Learning Access</h4>
+        <p class="thai">สิทธิ์เข้าร่วมหลักสูตรเวอร์ชันอัปเดตในอนาคตได้ตลอดชีพ</p>
+      </div>
+      <div class="privilege-card">
+        <h4>Priority Workshop Access</h4>
+        <p class="thai">สิทธิ์สำรองที่นั่งก่อนบุคคลทั่วไป พร้อมราคาพิเศษ</p>
+      </div>
+      <div class="privilege-card">
+        <h4>Real Class Practice</h4>
+        <p class="thai">เข้าร่วมฝึกในกรุ๊ปคลาสของโรงเรียนได้ทันทีหลังชำระมัดจำ</p>
+      </div>
+      <div class="privilege-card">
+        <h4>Personal Coaching 3 ครั้ง</h4>
+        <p class="thai">Coaching ส่วนตัวเพื่อพัฒนาศักยภาพและแนวทางการสอน</p>
+      </div>
+      <div class="privilege-card">
+        <h4>Founder Workshop Series</h4>
+        <p class="thai">3 workshops พิเศษหลังจบ: การเงิน / Social Media / ธุรกิจสำหรับครูโยคะ</p>
+      </div>
+      <div class="privilege-card">
+        <h4>Founder Community</h4>
+        <p class="thai">เครือข่ายครูโยคะและ community ของโรงเรียนตลอดชีพ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <p class="section-label reveal">ราคาและการชำระเงิน</p>
+    <h2 class="section-title reveal"><em>Founder Price</em></h2>
+    <div class="price-cards reveal">
+      <div class="price-card">
+        <p class="price-label">มูลค่าคอร์สเต็ม</p>
+        <p class="price-value">120,000</p>
+        <p class="price-sub">บาท</p>
+      </div>
+      <div class="price-card featured">
+        <p class="price-label">Founder Price</p>
+        <p class="price-value">99,000</p>
+        <p class="price-sub">บาท · สำหรับรุ่นแรก</p>
+      </div>
+      <div class="price-card">
+        <p class="price-label">มัดจำ</p>
+        <p class="price-value">20,000</p>
+        <p class="price-sub">บาท · หลังได้รับการตอบรับ</p>
+      </div>
+    </div>
+    <p class="payment-note thai reveal">หลังชำระมัดจำ 20,000 บาท ชำระส่วนที่เหลือ 79,000 บาท ก่อนเริ่มหลักสูตร<br>หรือวางแผนผ่อนชำระก่อนการเรียนจบหลักสูตร</p>
+  </div>
+</section>
+
+<!-- SMALL GROUP -->
+<section class="small-group">
+  <h2>⚠ รับเพียง 12 คนเท่านั้น</h2>
+  <p class="thai">เพื่อให้ผู้เรียนทุกคนได้รับ feedback รายคน การฝึกสอนจริงหลายรอบ และการดูแลอย่างใกล้ชิดตลอดหลักสูตร</p>
+  <a href="https://lin.ee/mOo3tAZ" class="btn-primary">สำรองที่นั่ง →</a>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline" id="timeline">
+  <div class="container">
+    <p class="section-label reveal">Timeline</p>
+    <h2 class="section-title reveal"><em>การสมัคร</em>และเริ่มเรียน</h2>
+    <div class="timeline-items reveal">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="time">เมษายน – พฤษภาคม</p>
+        <h4 class="thai">เปิดรับสมัคร</h4>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="time">มิถุนายน</p>
+        <h4 class="thai">สัมภาษณ์ผู้สมัครและปิดรับสมัคร</h4>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="time">กรกฎาคม 2569</p>
+        <h4 class="thai">เริ่มหลักสูตร Phase 1</h4>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="time">ปลายตุลาคม 2569</p>
+        <h4 class="thai">จบหลักสูตร — รับ RYT 200</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="who" id="who">
+  <div class="container">
+    <p class="section-label reveal">เหมาะกับใคร</p>
+    <h2 class="section-title reveal">หลักสูตรนี้<em>เหมาะกับ</em></h2>
+    <div class="who-grid reveal">
+      <div class="who-card"><p class="thai">ผู้ที่ต้องการเป็นครูโยคะอย่างจริงจัง</p></div>
+      <div class="who-card"><p class="thai">ผู้ฝึกโยคะที่ต้องการเข้าใจการฝึกลึกขึ้น</p></div>
+      <div class="who-card"><p class="thai">ครูโยคะที่ต้องการพัฒนาทักษะการสอน</p></div>
+      <div class="who-card"><p class="thai">ผู้ที่ต้องการสร้างเส้นทางอาชีพครูโยคะอย่างยั่งยืน</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <p class="section-label reveal">FAQ</p>
+    <h2 class="section-title reveal"><em>คำถาม</em>ที่พบบ่อย</h2>
+    <div class="faq-items reveal">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4 class="thai">ต้องเก่งโยคะมากไหมถึงจะเรียนได้?</h4>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-inner thai">ไม่จำเป็นต้องทำท่ายากได้ แต่ควรมีพื้นฐานการฝึกโยคะและความตั้งใจที่จะพัฒนาความเข้าใจเกี่ยวกับการฝึกอย่างจริงจัง</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4 class="thai">ถ้าไม่เคยสอนมาก่อนเรียนได้ไหม?</h4>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-inner thai">ได้ หลักสูตรออกแบบให้เรียนรู้ตั้งแต่พื้นฐาน รวมถึงการฝึกสอนจริงหลายรอบก่อนจบหลักสูตร</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4 class="thai">เรียนจบแล้วสามารถสอนได้เลยไหม?</h4>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-inner thai">เป้าหมายคือเตรียมให้คุณสามารถเริ่มต้นสอนได้อย่างมั่นใจ ผ่านการฝึกจริง feedback และ practicum อย่างต่อเนื่อง</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4 class="thai">เรียน online ได้ไหม?</h4>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-inner thai">ได้ หลักสูตรรองรับทั้ง in-person และ online ในกลุ่มเดียวกัน เหมาะสำหรับผู้เรียนต่างจังหวัดหรือคนไทยในต่างประเทศ</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4 class="thai">ถ้ายังไม่แน่ใจว่าจะเรียนครูดีไหม?</h4>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-inner thai">สามารถเริ่มจาก Foundation 50 ชั่วโมงก่อนได้ และสามารถนำไปต่อยอดเป็นหลักสูตร 200 ชั่วโมงได้</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container">
+    <p class="cta-quote">ถ้าคุณรู้สึกว่าโยคะไม่ใช่แค่การฝึก<br>แต่เป็นสิ่งที่คุณอยากส่งต่อให้ผู้อื่น</p>
+    <h2 class="cta-main">ก้าวจากผู้ฝึก<br>สู่ครูที่<em>มั่นใจ</em>ในแบบของตัวเอง</h2>
+    <p class="cta-sub thai">รับเพียง 12 คนเท่านั้น · Founder Price 99,000 บาท</p>
+    <a href="https://lin.ee/mOo3tAZ" class="btn-primary" style="font-size:17px; padding:20px 48px;">สมัครเลย →</a>
+    <p class="cta-contact">สอบถามเพิ่มเติม: <a href="https://lin.ee/mOo3tAZ">Line OA @chevashalayoga</a></p>
+  </div>
+</section>
+
+<footer>
+  CHEVA SHALA YOGA · EMBODIED ALIGNMENT RYS 200 · 2569
+</footer>
+
+<script>
+  // FAQ Toggle
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    item.classList.toggle('open');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
