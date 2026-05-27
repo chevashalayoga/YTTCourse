@@ -113,23 +113,25 @@
 
   .hero-subtitle {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(22px, 4vw, 32px);
+    font-size: clamp(18px, 3.5vw, 28px);
     font-weight: 300;
     color: var(--sand-mid);
     margin-bottom: 48px;
     opacity: 0;
     animation: fadeUp 0.8s ease 0.5s forwards;
+    white-space: nowrap;
   }
 
   .hero-tagline {
     font-family: 'Noto Serif Thai', serif;
-    font-size: 16px;
+    font-size: clamp(11px, 2vw, 15px);
     font-weight: 300;
     color: rgba(250,229,211,0.7);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin-bottom: 56px;
     opacity: 0;
     animation: fadeUp 0.8s ease 0.6s forwards;
+    white-space: nowrap;
   }
 
   .hero-cta {
@@ -901,7 +903,7 @@
     <p class="hero-subtitle">Yoga Teacher Training · RYS 200</p>
     <p class="hero-tagline thai">Embodied  ·  Structured  ·  Conscious Teaching</p>
     <div class="hero-cta">
-      <a href="https://lin.ee/mOo3tAZ" class="btn-primary">สมัครเลย →</a>
+      <a href="https://lin.ee/YQq9atLO" class="btn-primary">สมัครเลย →</a>
       <a href="#pain" class="btn-outline">ดูรายละเอียด</a>
     </div>
   </div>
@@ -1013,18 +1015,20 @@
     <h2 class="section-title reveal">รู้จัก<em>ครูป๋อม</em></h2>
 
     <!-- Hero Stats -->
-    <div style="background: var(--terracotta); border-radius: 12px; padding: 40px; margin-bottom: 32px; display: flex; gap: 0; overflow: hidden;" class="reveal">
-      <div style="flex: 1; text-align: center; padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.2);">
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: #fff; line-height: 1;">10+</p>
-        <p style="font-family: 'Noto Serif Thai', serif; font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 4px;">ปีของการสอน</p>
-      </div>
-      <div style="flex: 1; text-align: center; padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.2);">
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: #fff; line-height: 1;">5,000+</p>
-        <p style="font-family: 'Noto Serif Thai', serif; font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 4px;">ชั่วโมงสอน</p>
-      </div>
-      <div style="flex: 1; text-align: center; padding: 0 24px;">
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: #fff; line-height: 1;">10+</p>
-        <p style="font-family: 'Noto Serif Thai', serif; font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 4px;">หลักสูตรการอบรม</p>
+    <div style="background: var(--terracotta); border-radius: 12px; padding: 32px 24px; margin-bottom: 32px;" class="reveal">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: flex; align-items: center; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2);">
+          <p style="font-family: 'Jost', sans-serif; font-size: 52px; font-weight: 300; color: #fff; line-height: 1; min-width: 100px;">10+</p>
+          <p style="font-family: 'Noto Serif Thai', serif; font-size: 15px; color: rgba(255,255,255,0.85);">ปีของการสอน</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2);">
+          <p style="font-family: 'Jost', sans-serif; font-size: 52px; font-weight: 300; color: #fff; line-height: 1; min-width: 100px;">5,000+</p>
+          <p style="font-family: 'Noto Serif Thai', serif; font-size: 15px; color: rgba(255,255,255,0.85);">ชั่วโมงสอน</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <p style="font-family: 'Jost', sans-serif; font-size: 52px; font-weight: 300; color: #fff; line-height: 1; min-width: 100px;">10+</p>
+          <p style="font-family: 'Noto Serif Thai', serif; font-size: 15px; color: rgba(255,255,255,0.85);">หลักสูตรการอบรม</p>
+        </div>
       </div>
     </div>
 
@@ -1039,7 +1043,7 @@
     </div>
 
     <!-- Cards grid -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;" class="reveal">
+    <div style="display: flex; flex-direction: column; gap: 16px;" class="reveal">
 
       <!-- Yoga Certs -->
       <div style="background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid rgba(160,82,45,0.1);">
@@ -1068,45 +1072,40 @@
         </div>
       </div>
 
-      <!-- NLP + Teaching Style combined -->
-      <div style="display: flex; flex-direction: column; gap: 16px;">
-
-        <!-- NLP -->
-        <div style="background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid rgba(160,82,45,0.1);">
-          <div style="background: var(--sand); border-left: 4px solid var(--terracotta); padding: 14px 20px; display: flex; align-items: center; gap: 12px;">
-            <span style="font-size: 20px;">🧠</span>
-            <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--terracotta);">จิตภาษาศาสตร์ & โค้ชชิ่ง</p>
+      <!-- NLP -->
+      <div style="background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid rgba(160,82,45,0.1);">
+        <div style="background: var(--sand); border-left: 4px solid var(--terracotta); padding: 14px 20px; display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 20px;">🧠</span>
+          <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--terracotta);">จิตภาษาศาสตร์ & โค้ชชิ่ง</p>
+        </div>
+        <div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="background: var(--cream); border-radius: 6px; padding: 10px 14px; display: flex; align-items: center; gap: 10px;">
+            <span style="background: var(--terracotta); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 4px; white-space: nowrap;">NLP TRAINER</span>
+            <p style="font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--text-dark);">Life Lab Academy · รับรองโดย IFNLP และ AB NLP</p>
           </div>
-          <div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 8px;">
-            <div style="background: var(--cream); border-radius: 6px; padding: 10px 14px; display: flex; align-items: center; gap: 10px;">
-              <span style="background: var(--terracotta); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 4px; white-space: nowrap;">NLP TRAINER</span>
-              <p style="font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--text-dark);">Life Lab Academy · รับรองโดย IFNLP และ AB NLP</p>
-            </div>
-            <div style="background: var(--cream); border-radius: 6px; padding: 10px 14px; display: flex; align-items: center; gap: 10px;">
-              <span style="background: var(--terracotta-dark); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 4px; white-space: nowrap;">CO-FOUNDER</span>
-              <p style="font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--text-dark);">ผู้ร่วมก่อตั้ง สมาคม IFNLP Thai</p>
-            </div>
+          <div style="background: var(--cream); border-radius: 6px; padding: 10px 14px; display: flex; align-items: center; gap: 10px;">
+            <span style="background: var(--terracotta-dark); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 4px; white-space: nowrap;">CO-FOUNDER</span>
+            <p style="font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--text-dark);">ผู้ร่วมก่อตั้ง สมาคม IFNLP Thai</p>
           </div>
         </div>
+      </div>
 
-        <!-- Teaching Style -->
-        <div style="background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid rgba(160,82,45,0.1);">
-          <div style="background: var(--sand); border-left: 4px solid var(--gold); padding: 14px 20px; display: flex; align-items: center; gap: 12px;">
-            <span style="font-size: 20px;">🌿</span>
-            <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--terracotta);">สไตล์การสอน</p>
-          </div>
-          <div style="padding: 16px 20px;">
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <span style="background: var(--sand); border: 1px solid var(--sand-mid); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--terracotta); font-weight: 600;">Hot Yoga</span>
-              <span style="background: var(--sand); border: 1px solid var(--sand-mid); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--terracotta); font-weight: 600;">Hatha Yoga</span>
-              <span style="background: var(--sand); border: 1px solid var(--sand-mid); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--terracotta); font-weight: 600;">Vinyasa Yoga</span>
-              <span style="background: var(--cream); border: 1px solid rgba(160,82,45,0.15); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--text-mid);">Gentle Yoga</span>
-              <span style="background: var(--cream); border: 1px solid rgba(160,82,45,0.15); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--text-mid);">โยคะบำบัด</span>
-              <span style="background: var(--cream); border: 1px solid rgba(160,82,45,0.15); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--text-mid);">โยคะสำหรับคุณแม่ตั้งครรภ์</span>
-            </div>
+      <!-- Teaching Style -->
+      <div style="background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid rgba(160,82,45,0.1);">
+        <div style="background: var(--sand); border-left: 4px solid var(--gold); padding: 14px 20px; display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 20px;">🌿</span>
+          <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--terracotta);">สไตล์การสอน</p>
+        </div>
+        <div style="padding: 16px 20px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="background: var(--sand); border: 1px solid var(--sand-mid); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--terracotta); font-weight: 600;">Hot Yoga</span>
+            <span style="background: var(--sand); border: 1px solid var(--sand-mid); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--terracotta); font-weight: 600;">Hatha Yoga</span>
+            <span style="background: var(--sand); border: 1px solid var(--sand-mid); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--terracotta); font-weight: 600;">Vinyasa Yoga</span>
+            <span style="background: var(--cream); border: 1px solid rgba(160,82,45,0.15); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--text-mid);">Gentle Yoga</span>
+            <span style="background: var(--cream); border: 1px solid rgba(160,82,45,0.15); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--text-mid);">โยคะบำบัด</span>
+            <span style="background: var(--cream); border: 1px solid rgba(160,82,45,0.15); border-radius: 20px; padding: 5px 14px; font-family: 'Noto Serif Thai', serif; font-size: 13px; color: var(--text-mid);">โยคะสำหรับคุณแม่ตั้งครรภ์</span>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -1306,7 +1305,7 @@
 <section class="small-group">
   <h2>⚠ รับเพียง 12 คนเท่านั้น</h2>
   <p class="thai">เพื่อให้ผู้เรียนทุกคนได้รับ feedback รายคน การฝึกสอนจริงหลายรอบ และการดูแลอย่างใกล้ชิดตลอดหลักสูตร</p>
-  <a href="https://lin.ee/mOo3tAZ" class="btn-primary">สำรองที่นั่ง →</a>
+  <a href="https://lin.ee/YQq9atLO" class="btn-primary">สำรองที่นั่ง →</a>
 </section>
 
 <!-- TIMELINE -->
@@ -1405,14 +1404,98 @@
     <p class="cta-quote">ถ้าคุณรู้สึกว่าโยคะไม่ใช่แค่การฝึก<br>แต่เป็นสิ่งที่คุณอยากส่งต่อให้ผู้อื่น</p>
     <h2 class="cta-main">ก้าวจากผู้ฝึก<br>สู่ครูที่<em>มั่นใจ</em>ในแบบของตัวเอง</h2>
     <p class="cta-sub thai">รับเพียง 12 คนเท่านั้น · Founder Price 99,000 บาท</p>
-    <a href="https://lin.ee/mOo3tAZ" class="btn-primary" style="font-size:17px; padding:20px 48px;">สมัครเลย →</a>
-    <p class="cta-contact">สอบถามเพิ่มเติม: <a href="https://lin.ee/mOo3tAZ">Line OA @chevashalayoga</a></p>
+    <a href="https://lin.ee/YQq9atLO" class="btn-primary" style="font-size:17px; padding:20px 48px;">💬 ปรึกษาและสมัคร →</a>
+    <div style="margin-top: 20px;">
+      <a href="https://lin.ee/YQq9atLO" class="btn-primary" style="font-size:15px; padding:14px 36px; background: #E8A87C;">🎯 สมัครเลย — จำนวนจำกัด</a>
+    </div>
+    <p class="cta-contact" style="margin-top: 24px;">สอบถามเพิ่มเติม: <a href="https://lin.ee/YQq9atLO">Line OA @chevashalayoga</a></p>
+    <div style="margin-top: 32px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap;">
+      <a href="https://lin.ee/YQq9atLO"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0"></a>
+      <img src="https://qr-official.line.me/gs/M_141imhrm_BW.png?oat_content=qr" alt="QR Code Line" style="width: 80px; height: 80px; border-radius: 8px; background: #fff; padding: 4px;">
+    </div>
   </div>
 </section>
 
 <footer>
   CHEVA SHALA YOGA · EMBODIED ALIGNMENT RYS 200 · 2569
 </footer>
+
+<!-- FLOATING BUTTONS -->
+<style>
+  .float-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 24px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  .float-consult {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: var(--terracotta);
+    border: 2px solid var(--terracotta);
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 100px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(160,82,45,0.2);
+    transition: all 0.3s ease;
+    animation: floatIn 0.5s ease both;
+  }
+
+  .float-consult:hover {
+    background: var(--terracotta);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(160,82,45,0.3);
+  }
+
+  .float-apply {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--terracotta);
+    color: #fff;
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: 100px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(160,82,45,0.35);
+    transition: all 0.3s ease;
+    animation: floatIn 0.5s ease 0.15s both;
+  }
+
+  .float-apply:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(160,82,45,0.4);
+  }
+
+  @keyframes floatIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 480px) {
+    .float-btn { bottom: 20px; right: 16px; }
+    .float-consult, .float-apply { font-size: 13px; padding: 11px 18px; }
+  }
+</style>
+
+<div class="float-btn">
+  <a href="https://lin.ee/YQq9atLO" class="float-consult">💬 ปรึกษา</a>
+  <a href="https://lin.ee/YQq9atLO" class="float-apply">🎯 สมัครเลย — จำนวนจำกัด</a>
+</div>
 
 <script>
   // FAQ Toggle
